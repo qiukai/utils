@@ -72,10 +72,21 @@ public class StringUtil {
      * @return 拼装好的字符串
      */
     public static String connectionString(String[] strs,String sign) {
+        StringBuilder sb = new StringBuilder();
+        return connectionString(strs,sign,sb);
+    }
+
+    /**
+     * 将字符串数组拼接成一个字符串
+     * @param strs 需要拼接的数组
+     * @param sign 分隔符
+     * @param sb 字符串拼装容器
+     * @return 拼装好的字符串
+     */
+    public static String connectionString(String[] strs,String sign,StringBuilder sb) {
         if (null == strs || 0 == strs.length) {
             return "";
         }
-        StringBuilder sb = new StringBuilder();
         for (String str : strs) {
             sb.append(str).append(sign);
         }
