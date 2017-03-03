@@ -1,12 +1,10 @@
 package top.qiuk.number;
 
 import top.qiuk.constant.ExceptionTypeEnum;
+import top.qiuk.constant.StringType;
 import top.qiuk.exception.UtilRuntimeException;
 
 import java.util.*;
-import java.util.concurrent.Executor;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 /**
  * 数组自增
@@ -27,19 +25,23 @@ public class Add {
 
     private static Add add = new Add();
 
+    /**
+     * 对外公开的唯一的获取字符串的方法
+     * @param stringType 字符串类型
+     * @param length 字符串长度
+     * @return 字符串
+     */
     public static String getNextString(StringType stringType, int length) {
-        return add.getId(stringType,length);
+        return add.getId(stringType, length);
     }
 
     private String getId(StringType stringType, int length) {
-
         synchronized ("id") {
-            this.key = StringNumber.getKey(stringType, length);
+            this.key = this.getKey(stringType, length);
             this.length = length;
 
             char[] chars = null;
             chars = stringCharMap.get(key);
-
 
             if (stringType.equals(StringType.NUMBER)) {
                 if (null == chars) {
@@ -104,5 +106,15 @@ public class Add {
     private String createId(char[] chars) {
         stringCharMap.put(key, chars);
         return new String(chars);
+    }
+
+    private String getKey(StringType stringType, int length) {
+        if (StringType.NUMBER.equals(stringType))
+            return "n" + length;
+        if (StringType.STRING.equals(stringType))
+            return "s" + length;
+        if (StringType.STRING_NUMBER.equals(stringType))
+            return "sn" + length;
+        throw new UtilRuntimeException(ExceptionTypeEnum.EXCEPTION_TYPE_ENUM);
     }
 }
