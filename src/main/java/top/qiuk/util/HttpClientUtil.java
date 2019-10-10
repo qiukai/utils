@@ -1,7 +1,15 @@
 package top.qiuk.util;
 
+import org.apache.commons.httpclient.Cookie;
+import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.HttpMethod;
-import sun.net.www.http.HttpClient;
+import org.apache.commons.httpclient.NameValuePair;
+import org.apache.commons.httpclient.methods.DeleteMethod;
+import org.apache.commons.httpclient.methods.GetMethod;
+import org.apache.commons.httpclient.methods.PostMethod;
+import org.apache.commons.httpclient.methods.PutMethod;
+import org.apache.commons.httpclient.params.HttpMethodParams;
+import org.apache.log4j.Logger;
 import top.qiuk.constant.ExceptionTypeEnum;
 import top.qiuk.exception.UtilRuntimeException;
 
