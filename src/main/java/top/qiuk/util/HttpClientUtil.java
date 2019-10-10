@@ -1,20 +1,13 @@
 package top.qiuk.util;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.Map;
-
-import org.apache.commons.httpclient.*;
-import org.apache.commons.httpclient.methods.DeleteMethod;
-import org.apache.commons.httpclient.methods.GetMethod;
-import org.apache.commons.httpclient.methods.PostMethod;
-import org.apache.commons.httpclient.methods.PutMethod;
-import org.apache.commons.httpclient.params.HttpMethodParams;
-import org.apache.log4j.Logger;
+import org.apache.commons.httpclient.HttpMethod;
+import sun.net.www.http.HttpClient;
 import top.qiuk.constant.ExceptionTypeEnum;
 import top.qiuk.exception.UtilRuntimeException;
+
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.util.Map;
 
 /**
  * 发送http请求帮助类
