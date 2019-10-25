@@ -67,6 +67,7 @@ public class HttpClientUtil {
     public String execute(HttpMothod mothod, String fileName) {
         logger.info("请求的url为:" + url);
         HttpMethod httpMethod = getHttpMethod(mothod);
+        httpClient.getParams().setParameter("http.protocol.allow-circular-redirects", true);
         String value = null;
         try {
             this.httpClient.executeMethod(httpMethod);
@@ -192,7 +193,6 @@ public class HttpClientUtil {
 
     /**
      * http请求添加uri后面的参数
-     *
      */
     private void setQueryString(HttpMethod httpMethod) {
         httpMethod.setQueryString(biuderNameValuePair());
@@ -223,7 +223,21 @@ public class HttpClientUtil {
                     i++;
                 }
             }
+        } else {
+            nameValuePairs = new NameValuePair[0];
         }
         return nameValuePairs;
+    }
+
+
+    public static void main(String[] args) {
+
+        String url = "http://127.0.0.1:8090/lanmaoly-agent-boss/aa/aa";
+
+        HttpClientUtil httpClientUtil = new HttpClientUtil(url);
+        String execute = httpClientUtil.execute(HttpMothod.GET);
+
+        System.out.println(execute);
+
     }
 }
