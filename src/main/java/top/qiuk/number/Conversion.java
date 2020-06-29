@@ -9,7 +9,7 @@ public class Conversion {
 
     public static void main(String[] str) {
 
-        String conversion = new Conversion().conversion(Long.MAX_VALUE, Add.nsChars, 0);
+        String conversion = new Conversion().conversion(System.currentTimeMillis(), Add.nsChars, 0);
         System.out.println(conversion);
     }
 

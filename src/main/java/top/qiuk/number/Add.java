@@ -117,4 +117,12 @@ public class Add {
             return "sn" + length;
         throw new UtilRuntimeException(ExceptionTypeEnum.EXCEPTION_TYPE_ENUM);
     }
+
+    public static void main(String[] args) {
+        for (int i = 0; i < 100000; i++) {
+            String nextString = Add.getNextString(StringType.STRING_NUMBER, 3);
+            System.out.println(nextString);
+        }
+
+    }
 }
