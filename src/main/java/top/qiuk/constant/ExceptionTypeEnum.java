@@ -40,6 +40,11 @@ public enum ExceptionTypeEnum {
 	CONNECTION_POOL_IS_NULL("连接池已经没有连接", 7),
 
 	/**
+	 * 连接池已经没有连接
+	 */
+	REDIS("redis 异常", 7),
+
+	/**
 	 * 异常类型枚举异常
 	 */
 	EXCEPTION_TYPE_ENUM("异常类型枚举异常", 0);
