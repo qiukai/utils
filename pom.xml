@@ -1,23 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-<modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>
 
     <groupId>qiukai</groupId>
     <artifactId>utils</artifactId>
     <version>1.0-SNAPSHOT</version>
-<!--    <build>-->
-<!--        <plugins>-->
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-compiler-plugin</artifactId>-->
-<!--                <configuration>-->
-<!--                    <source>8</source>-->
-<!--                    <target>8</target>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
-<!--        </plugins>-->
-<!--    </build>-->
 
 
     <dependencies>
@@ -83,10 +71,42 @@
             <version>8.0.20</version>
         </dependency>
 
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.4.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>dom4j</groupId>
+            <artifactId>dom4j</artifactId>
+            <version>1.6.1</version>
+        </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>org.apache.curator</groupId>-->
+<!--            <artifactId>curator-framework</artifactId>-->
+<!--            <version>2.9.0</version>-->
+<!--        </dependency>-->
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-recipes</artifactId>
+            <version>2.9.0</version>
+        </dependency>
+
     </dependencies>
 
     <build>
         <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
@@ -111,13 +131,13 @@
                 </dependencies>
                 <configuration>
                     <!--username-->
-                    <username>whtax_fee</username>
+                    <username>oladingagent</username>
                     <!--password-->
-                    <password>whtax_fee</password>
+                    <password>oladingagent</password>
                     <!--driver-->
                     <driverClassName>com.mysql.cj.jdbc.Driver</driverClassName>
                     <!--jdbc url-->
-                    <jdbcUrl>jdbc:mysql://172.19.60.38/whtax_fee</jdbcUrl>
+                    <jdbcUrl>jdbc:mysql://172.19.60.38/oladingagent</jdbcUrl>
                     <!--生成文件类型-->
                     <fileType>HTML</fileType>
                     <!--打开文件输出目录-->
@@ -132,7 +152,7 @@
                     <!--版本-->
                     <version>${project.version}</version>
                     <!--标题-->
-                    <title>whtax_fee数据库文档</title>
+                    <title>oladingagent数据库文档</title>
                 </configuration>
                 <executions>
                     <execution>

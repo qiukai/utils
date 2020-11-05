@@ -30,8 +30,20 @@ public class sidjfl {
     }
 
     public static void main(String[] args) {
-        String s = "asdfsdf".toUpperCase();
-        System.out.println(s);
+
+
+
+//        String s = "asdfsdf".toUpperCase();
+//        System.out.println(s);
+
+
+        Integer integer = 1;
+        Integer integer1 = 1;
+        System.out.println(integer==integer1);
+
+//        int i1 = (i ^ (i >>> 16)) ;
+//        System.out.println(i1);
+
     }
 
 }
