@@ -1,17 +1,15 @@
 package top.qiuk;
 
 
-import java.util.Arrays;
-
 public class Dome {
 
     public static void main(String[] args) throws Exception {
 
 
-        int[] nums = new int[]{1, 3, 5, 2};
-        new Dome().sort(nums);
 
-        System.out.println(Arrays.toString(nums));
+
+
+
 
     }
 

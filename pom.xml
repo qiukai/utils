@@ -131,13 +131,13 @@
                 </dependencies>
                 <configuration>
                     <!--username-->
-                    <username>oladingagent</username>
+                    <username>whtax2</username>
                     <!--password-->
-                    <password>oladingagent</password>
+                    <password>123456</password>
                     <!--driver-->
                     <driverClassName>com.mysql.cj.jdbc.Driver</driverClassName>
                     <!--jdbc url-->
-                    <jdbcUrl>jdbc:mysql://172.19.60.38/oladingagent</jdbcUrl>
+                    <jdbcUrl>jdbc:mysql://172.19.60.38/whtax2</jdbcUrl>
                     <!--生成文件类型-->
                     <fileType>HTML</fileType>
                     <!--打开文件输出目录-->
